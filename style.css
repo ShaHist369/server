@@ -1,0 +1,239 @@
+@font-face {
+    font-family: asterixis; 
+    src: url(fonts/asterixis.ttf);/* Путь к файлу со шрифтом */
+}
+body{
+  display:flex;
+  justify-content: center;
+  background-color: gray;
+}
+h1, h2 {
+  font-family: Lato;
+}
+p{
+  color:gray;
+  size:inherit;
+}
+form{
+  padding:0px;
+  overflow: hidden;
+  max-width:600px;
+  display:grid;
+  background-color: white;
+  border-radius:10px;
+}
+.form__title{
+  border-radius: 10px 10px 0 0;
+  padding:5px;
+  background: blue;
+  color:white;
+}
+.form__title__title{
+  margin:10px;
+}
+.form__name{
+  width:100%;
+}
+.form__name input{
+  width:100%;
+}
+.form__container{
+  background-color: white;
+  padding:10px;
+}
+input{
+  width:40%;
+  min-width:40px;
+  border:none;
+  border-bottom:1px solid black;
+  font-size:inherit;
+}
+.form__gender{
+  display: inline-flex;
+  margin-right:20px;
+}
+.form__gender__gender{
+  color:black;
+}
+.form__age{
+  display: inline-flex;
+}
+.form__age-input{
+  width:40px;
+  min-width:30px;
+  height: 14px;
+  margin:15px 10px;
+}
+.form__email{
+  width:100%;
+}
+.form__email-input{
+  width:100%;
+}
+.form__password{
+  display: grid;
+  width:100%;
+}
+.form__password input{
+  width:100%;
+}
+.form__password__password{
+  width:auto;
+}
+.form__password__confirm-password{
+  width:auto;
+}
+.form__submit{
+  cursor:pointer;
+  background: blue;
+  color:white;
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+  
+}
+.small-title{
+  font-size:11px;
+}
+.form__gender__div p{
+  position:relative;
+  top:-17px;
+  left: 30px;
+  color:black;
+}
+.form__gender__div{
+  position:relative;
+  top:15px;
+}
+.form__gender__div label{
+  margin-right: 50px;
+}
+#btnrv1:checked ~ #labelrv1,
+#btnrv2:checked ~ #labelrv2{
+	background: rgb(255,64,129);
+  border: 2px solid rgb(255,64,129);
+}
+label {
+    position: relative;
+    top:-10px;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 2px solid gray;
+    background: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+label:before {
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    display: block;
+    content: '';
+    border: 2px solid #fff;
+}
+#btnrv1,#btnrv2{
+  display:none;
+}
+.disabled{
+  background: gray;
+  color:white;
+}
+.form__container-submit{
+  position: relative;
+
+  margin-left:auto;
+  margin-right:auto;
+}
+.form__hide-submit{
+  display:block;
+  position:absolute;
+  top:10px;
+  width:80px;
+  height: 45px;
+}
+.disactivate-hide{
+  width:0;
+  height: 0;
+}
+.form__password input{
+  font-family: asterixis;
+}
+@media screen and (min-width: 350px){
+  .form__password{
+    display:flex;
+  }
+  .form__password__password{
+    margin-right:10px;
+    width:45%;
+  }
+    .form__password__confirm-password{
+    margin-right:10px;
+    width:45%;
+  }
+.form__name input{
+  width:45%;
+}
+  .form__email-input{
+  width:94%;
+}
+}
+#sucsess-message{
+  display: none;
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding:20px;
+}
+.button{
+  cursor:pointer;
+  background: blue;
+  color:white;
+  padding:10px;
+  border-radius:10px;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.active-sucsess{
+  position: absolute;
+  margin-left:auto;
+  margin-right:auto;
+  display: flex;
+}
+.sucsess-message_body{
+  background: white;
+  border-radius: 10px;
+  padding:20px;
+  margin-bottom: 10px;
+}
+.sucsess-message_title{
+  background: blue;
+  color:white;
+  border-radius: 10px;
+}
+.sucsess-message_title h3{
+  margin:0px;
+  text-align: center;
+}
+#existUsersContainer{
+  display:none;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+}
+.existUser{
+  margin-bottom: 10px;
+}
+.userField{
+  display:flex;
+}
+.existUser__title{
+  background: blue;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}

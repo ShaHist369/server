@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login form</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<form id="form" >
+		  <div class="form__title">
+		      <h3 class="form__title__title">Sign Up</h3>
+		  </div>
+		  <div class="form__container">
+		    	<div class="form__name">    
+		      <input type='text' required id='firstName' name='firstName' class='form__first-name' placeholder='First Name'>
+		      <input type='text' required id='lastName' name='lastName' class='form__last-name' placeholder='Last Name'> 
+		    	</div>
+			    <div class="form__gender">
+			      		<p >Gender<p/>
+			      		<div class="form__gender__div">
+								<input type="radio" name="gender" id="btnrv1" checked value="male">
+								<input type="radio" name="gender" id="btnrv2"  value="female" >
+								<label id="labelrv1" for="btnrv1" ><p>Male</p></label>
+								<label id="labelrv2" for="btnrv2" ><p>Female</p></label>		
+						</div>			
+			     </div>
+			    <div class="form__age">
+			      <p>Age</p>
+			      <input type='number' required id='age' name='age' min="10" max="100" class='form__age-input'>
+			    </div>
+		    	<div class="form__email">
+				      <p class="small-title">Email<p>
+				      <input type='email' id='email' required pattern="\w+@\w+\.\w+" name='email' class='form__email-input' >
+		     	</div>
+		    	<div class="form__password">
+			        <div class="form__password__password">
+			          <p class="small-title">Password</p>
+			          <input type='text' autocomplete="off" required pattern="(^[a-zA-Z]+$)|(^[ 0-9]+$)" id='password' name='password' class='form__password-input'>
+			        </div>
+			        <div class="form__password__confirm-password">
+			          <p class="small-title">Confirm password</p>
+			          <input type='text' autocomplete="off" required pattern="(^[a-zA-Z]+$)|(^[ 0-9]+$)" id='confirmPassword' class='form__confirm-password-input'>
+			        </div>
+		    	</div>
+		  </div> 
+		  <div class="form__container-submit">
+
+		  	  <div id='hideSubmit' class="form__hide-submit"></div>
+		  	  <input type="submit" class="form__submit disabled" disabled id='submit' value="Sign Up">
+		  </div>
+</form>
+<div id="sucsess-message">
+	<div class="sucsess-message_body">
+		<div class="sucsess-message_title"><h3>new user</h3></div>
+		<div class="userField"><p>first name:</p><p id='firstNameSucsess'></p></div>
+		<div class="userField"><p>last name:</p><p id='lastNameSucsess'></p></div>
+		<div class="userField"><p>gender:</p><p id='genderSucsess'></p></div>
+		<div class="userField"><p>age:</p><p id='ageSucsess'></p></div>
+		<div class="userField"><p>email:</p><p id='emailSucsess'></p></div>
+		<div class="userField"><p>password:</p><p id='passwordSucsess'></p></div>
+		<button id="showUsersButton" class="button">Show exist users</button>
+		<button id="signUpAgain" class="button">Sign up again</button>
+	</div>
+
+	<div id="existUsersContainer"></div>
+</div>
+
+<script type="text/javascript" src="./main.js"></script>
+
+</body>
+</html>
